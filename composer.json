@@ -1,27 +1,38 @@
 {
     "name": "cvreferral/flysystem-aws-s3-v3",
-    "description": "AWS S3 filesystem adapter for Flysystem.",
-    "keywords": ["aws", "s3", "flysystem", "filesystem", "storage", "file", "files"],
-    "type": "library",
-    "autoload": {
-        "psr-4": {
-            "League\\Flysystem\\AwsS3V3\\": ""
-        }
-    },
-    "require": {
-        "php": "^7.2 || ^8.0",
-        "league/flysystem": "2.0.2",
-        "league/mime-type-detection": "^1.0.0",
-        "cvreferral/aws-sdk-php": "3.0.x-dev"
-    },
-    "conflict": {
-        "guzzlehttp/ringphp": "<1.1.1"
-    },
+    "description": "Flysystem adapter for the AWS S3 SDK v3.x",
     "license": "MIT",
     "authors": [
         {
             "name": "Frank de Jonge",
-            "email": "info@frankdejonge.nl"
+            "email": "info@frenky.net"
         }
-    ]
+    ],
+    "require": {
+        "php": ">=5.5.0",
+        "league/flysystem": "^1.0.40",
+        "cvreferral/aws-sdk-php": "^3.0.x-dev"
+    },
+    "require-dev": {
+        "phpspec/phpspec": "^2.0.0",
+        "henrikbjorn/phpspec-code-coverage" : "~1.0.1"
+    },
+    "autoload": {
+        "psr-4": {
+            "League\\Flysystem\\AwsS3v3\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "League\\Flysystem\\AwsS3v3\\Stub\\": "stub"
+        }
+    },
+    "config": {
+        "bin-dir": "bin"
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "1.0-dev"
+        }
+    }
 }
